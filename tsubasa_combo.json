@@ -3,16 +3,16 @@
   "tasks": [
     {
       "choice_1": {
-        "id": "abcd",
-        "category_id": 5
+        "id": "C6",
+        "category_id": 2
       },
       "choice_2": {
-        "id": "abcd",
+        "id": "SP-P7-1",
         "category_id": 5
       },
       "choice_3": {
-        "id": "abcd",
-        "category_id": 5
+        "id": "P7",
+        "category_id": 1
       }
     }
   ]
