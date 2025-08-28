@@ -1,0 +1,5 @@
+{
+  "Quiz #1": "No",
+  "Quiz #2": "Above 100,000",
+  "Quiz #3": "None, because FastSet validators don’t need to talk to each other."
+}
