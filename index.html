@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giờ Hà Nội</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: transparent;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #000000;
+        }
+
+        .clock-container {
+            text-align: center;
+        }
+
+        .date {
+            font-size: 1.5rem;
+            margin-bottom: 2vh;
+            transition: opacity 0.3s ease;
+        }
+
+        .time {
+            font-size: 20vmin;
+            font-weight: normal;
+            transition: opacity 0.3s ease;
+            line-height: 1;
+        }
+
+        @media (max-width: 768px) {
+            .date {
+                font-size: 1rem;
+            }
+            .time {
+                font-size: 18vmin;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="clock-container">
+        <div class="date" id="date"></div>
+        <div class="time" id="time"></div>
+    </div>
+
+    <script>
+        function updateClock() {
+            // Lấy thời gian hiện tại theo múi giờ Việt Nam (UTC+7)
+            const now = new Date();
+            const vietnamTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Ho_Chi_Minh' }));
+
+            // Định dạng ngày tháng năm
+            const days = ['Chủ Nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm', 'Thứ Sáu', 'Thứ Bảy'];
+            const dayName = days[vietnamTime.getDay()];
+            const day = vietnamTime.getDate();
+            const month = vietnamTime.getMonth() + 1;
+            const year = vietnamTime.getFullYear();
+
+            const dateString = `${dayName}, ngày ${day} tháng ${month} năm ${year}`;
+
+            // Định dạng giờ phút giây (24h)
+            const hours = String(vietnamTime.getHours()).padStart(2, '0');
+            const minutes = String(vietnamTime.getMinutes()).padStart(2, '0');
+            const seconds = String(vietnamTime.getSeconds()).padStart(2, '0');
+
+            const timeString = `${hours}:${minutes}:${seconds}`;
+
+            // Cập nhật nội dung với hiệu ứng mượt mà
+            const dateElement = document.getElementById('date');
+            const timeElement = document.getElementById('time');
+
+            if (dateElement.textContent !== dateString) {
+                dateElement.style.opacity = '0';
+                setTimeout(() => {
+                    dateElement.textContent = dateString;
+                    dateElement.style.opacity = '1';
+                }, 150);
+            } else {
+                dateElement.textContent = dateString;
+            }
+
+            timeElement.style.opacity = '0';
+            setTimeout(() => {
+                timeElement.textContent = timeString;
+                timeElement.style.opacity = '1';
+            }, 150);
+        }
+
+        // Cập nhật mỗi giây
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+</body>
+</html>
