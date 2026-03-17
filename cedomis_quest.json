@@ -15,4 +15,7 @@
   "Sprint | Mastering YourProfil3": ["B", "A", "C", "D", "B"],
   "Blockchain Basics: Wallets, Keys & Crypto Exchanges": ["A", "B", "B", "A", "C"],
   "Smart Contracts & dApps": ["C", "B", "B", "A", "C"],
-  "Centralized Exchanges (CEX)": ["C", "C", "D", "B", "A"]} 
+  "Centralized Exchanges (CEX)": ["C", "C", "D", "B", "A"],
+  "Smart Contracts Fundamentals & Applications": ["B", "A", "C", "D", "B"],
+  "Non-Fungible Tokens (NFTs)": ["A", "A", "B", "C", "B"],
+  "Private Keys & Seed Phrases": ["B", "A", "B", "C", "D"]}
