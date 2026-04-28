@@ -18,4 +18,5 @@
   "Centralized Exchanges (CEX)": ["C", "C", "D", "B", "A"],
   "Smart Contracts Fundamentals & Applications": ["B", "A", "C", "D", "B"],
   "Non-Fungible Tokens (NFTs)": ["A", "A", "B", "C", "B"],
-  "Private Keys & Seed Phrases": ["B", "A", "B", "C", "D"]}
+  "Private Keys & Seed Phrases": ["B", "A", "B", "C", "D"],
+  "Entering the Avalanche Ecosystem": ["C", "B", "D", "B", "C", "D" ]}
